@@ -2,11 +2,12 @@
 title: "Arknights Library" # the name of your site, e.g. ACME Corp.
 authors: "Doctors"
 project_url: "https://github.com/kiraio-moe/Arknights-Library"
+contributors: "https://github.com/kiraio-moe/Arknights-Library/graphs/contributors"
 domain: kiraio-moe.github.io # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
 url: "https://kiraio-moe.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "/Arknights-Library" # the subpath of your site, e.g. /blog. Default: ./
 description: >- # this means to ignore newlines until "baseurl:"
-    A collections of Assets, Resources and Tools to boost up your experiences with Arknights. Developed by Doctors for Doctors.
+    A collections of Assets, Resources and Tools to boost up your experiences with Arknights
 logo:
 destination: ./_site # Where built site should stored.
 
@@ -18,7 +19,7 @@ lang: "en" # language
 dir: "ltr" # page direction
 # generate social links in footer
 # social:
-#   name: 
+#   name:
 #   links:
 #     - telegram: https://t.me/
 #     - github: https://github.com/

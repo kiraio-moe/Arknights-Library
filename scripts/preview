@@ -6,4 +6,5 @@
 set -e
 
 echo "Live previewing the site..."
+# config path is relative to where you execute this script, if you execute outside project root folder or inside another folder, it will fail. Please execute this at project root folder i.e (../scripts/preview)
 bundle exec jekyll serve -l -w --config _config.yml

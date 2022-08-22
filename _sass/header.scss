@@ -1,0 +1,74 @@
+.header {
+    position: relative;
+    overflow: hidden;
+
+    & .tilt-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        background-image: url("../images/bg-header.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        // transform-style: preserve-3d;
+        // transform: perspective(26rem);
+    }
+
+    // & .ak-logo {
+        // transform: translateZ(100rem)
+    // }
+
+    & video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 0 !important;
+        -o-ms-transform: translateX(-50%) translateY(-50%);
+        -o-moz-transform: translateX(-50%) translateY(-50%);
+        -o-webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    & .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: $ak-black;
+        opacity: 0.5;
+        z-index: 1;
+    }
+
+    & .header-hero {
+        position: inherit;
+        z-index: 2;
+
+        & .title {
+            font-family: "NicoKaku";
+        }
+    }
+}
+
+/* Media Query for devices within coarse pointers and no hover functionality */
+
+/* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+
+// @media (pointer: coarse) and (hover: none) {
+//     .header {
+//         background: url("")
+//             black no-repeat center center scroll;
+//     }
+
+//     .header video {
+//         display: none;
+//     }
+// }

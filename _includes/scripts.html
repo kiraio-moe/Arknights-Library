@@ -1,4 +1,14 @@
-{% comment %} Enqueue scripts. {% endcomment %}
+{% comment %} Enqueue Javascripts. {% endcomment %}
 
+<!--[if lt IE 9]>
+    <script src="{{ 'assets/js/html5shiv/html5shiv.min.js' relative_url }}"></script>
+    <script src="{{ 'assets/js/html5shiv/html5shiv-printshiv.min.js' relative_url }}"></script>
+<![endif]-->
+{%- if jekyll.environment == 'production' and site.google_analytics -%} {%- include google-analytics.html -%}
+{%- endif -%}
 <script src="{{ 'assets/js/bootstrap/bootstrap.bundle.min.js' | relative_url }}"></script>
 <script src="{{ 'assets/js/jquery/jquery-3.6.0.min.js' | relative_url }}"></script>
+<script src="{{ 'assets/js/scrollify/jquery.scrollify.min.js' relative_url }}"></script>
+<script src="{{ 'assets/js/vanilla-tilt/vanilla-tilt.pollyfill.min.js' relative_url }}"></script>
+<script src="{{ 'assets/js/vanilla-tilt/vanilla-tilt.min.js' relative_url }}"></script>
+<script src="{{ 'assets/js/main.js' | relative_url }}"></script>

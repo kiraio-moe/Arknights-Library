@@ -7,10 +7,5 @@
         name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
     />
-    {%- seo -%}
-    {%- if jekyll.environment == 'production' and
-    site.google_analytics -%}
-        {%- include google-analytics.html -%}
-    {%- endif -%}
-    {%- include styles.html -%}
+    {%- seo -%} {%- include styles.html -%}
 </head>
