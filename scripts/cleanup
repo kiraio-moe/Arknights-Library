@@ -6,21 +6,21 @@
 set -e
 
 Cleanup() {
-  echo "Cleaning up your space..."
-  bundle clean --force
-  echo "Done."
+    echo "Cleaning up your space..."
+    bundle clean --force
+    echo "Done."
 }
 
 while true; do
-    read -p "Do you want to cleanup unnecessary gems dependecy? (y/n): " yn
+    read -p "Do you want to cleanup unnecessary gems dependency? (y/n): " yn
     case $yn in
         [Yy]*)
-          Cleanup;
-          break;;
+            Cleanup;
+            break;;
         [Nn]*)
-          echo "Ok, fine."
-          exit;;
+            echo "Ok, fine."
+            exit;;
         *)
-          echo "OωO: Invalid input. Please answer y/n";;
+            echo "OωO: Invalid input. Please answer y/n";;
     esac
 done

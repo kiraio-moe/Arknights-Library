@@ -1,5 +1,17 @@
 {% comment %} Footer section. {% endcomment %}
 
-<footer class="py-4 text-muted text-center">
-    Made with ❤️ by <a href="{{ site.project_url }}">{{ site.authors }}</a>
+<!-- Footer -->
+<footer class="footer sticky-section" data-section-name="Footer">
+    <div class="container">
+        <div class="d-flex text-center align-items-center">
+            <div class="w-100">
+                <p>
+                    Made with ❤️ by
+                    <a href="{{ site.contributors }}">{{ site.authors }}</a>
+                </p>
+                <sub class="latest-update">Latest Update: {{ title.date }}</sub>
+            </div>
+        </div>
+    </div>
 </footer>
+<!-- /Footer -->

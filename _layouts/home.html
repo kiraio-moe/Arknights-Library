@@ -2,7 +2,42 @@
 layout: default
 ---
 
-{% comment %} Our homepage. {% endcomment %} {%- include header.html -%}
-<section class="section home-content">
-    <div class="container"></div>
-</section>
+{% comment %} Our homepage. {% endcomment %} {%- include navbar.html -%} {%-
+include header.html -%}
+
+<div class="sticky-section vh" data-section-name="Assets">
+    <div class="container">
+        <h1 class="section-header text-center">ASSETS & RESOURCES</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quasi
+            expedita, minima laboriosam eum, repellat nobis ex suscipit odit
+            reiciendis sequi earum asperiores qui maiores harum quia tempore,
+            eius laborum! Lorem, ipsum dolor sit amet consectetur adipisicing
+            elit. Rerum in magnam nobis natus sint pariatur ducimus, quasi ut
+            vel, temporibus error voluptate. Unde deleniti dolores repellat
+            reprehenderit voluptas accusantium enim?
+        </p>
+    </div>
+</div>
+
+<div class="sticky-section vh" data-section-name="Tools">
+    <div class="container">
+        <h1 class="section-header text-center">TOOLS</h1>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
+            saepe nemo temporibus illo repellat esse iusto incidunt hic, ad vel
+            maiores sapiente consequuntur quae accusamus cupiditate, aspernatur
+            consequatur reiciendis. Debitis! Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Atque tempora nisi totam, amet
+            temporibus dolor earum, sunt voluptatem, quia quasi culpa deleniti
+            recusandae vitae dolore dolorem rem. Odio, tempore blanditiis! Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+            doloribus perspiciatis sed voluptatem exercitationem sequi labore
+            quod laborum blanditiis voluptates veniam fugiat cum doloremque,
+            reprehenderit omnis neque earum iusto officiis.
+        </p>
+    </div>
+</div>
+
+{%- include gallery.html -%}
+{%- include footer.html -%}

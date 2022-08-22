@@ -1,5 +1,53 @@
 {% comment %} Header section. {% endcomment %}
 
-<header>
+<header class="header sticky-section vh" data-section-name="Home">
+    <div
+        class="tilt-bg"
+        data-tilt
+        data-tilt-max="2"
+        data-tilt-reset="false"
+        data-tilt-speed="2000"
+        data-tilt-reverse="true"
+        data-tilt-perspective="10000"
+        data-tilt-full-page-listening="true"
+        data-tilt-gyroscope="true"
+        data-tilt-gyroscopeMinAngleX="-1"
+        data-tilt-gyroscopeMaxAngleX="1"
+        data-tilt-gyroscopeMinAngleY="-1"
+        data-tilt-gyroscopeMinAngleY="1"
+    ></div>
+    <!-- The HTML5 video element that will create the background video on the header -->
+    <!-- <video
+        class="header-bg-video"
+        playsinline="playsinline"
+        autoplay="autoplay"
+        muted="muted"
+        loop="loop"
+    >
+        <source
+            src="{{ 'assets/videos/header.mp4' | relative_url }}"
+            type="video/mp4"
+        />
+    </video> -->
 
+    <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+    <div class="overlay"></div>
+
+    <div class="container h-100 header-hero">
+        <div class="d-flex h-100 text-center align-items-center">
+            <div class="w-100 text-white">
+                <img
+                    src="{{ 'assets/images/ak-logo.png' | relative_url }}"
+                    alt="Arknights logo"
+                    class="ak-logo"
+                />
+                <h1 class="title display-3">LIBRARY</h1>
+                <p class="lead mb-0">
+                    {{ site.description }}. <br />
+                    Developed by
+                    <a href="{{ site.contributors }}">Doctors</a> for Doctors
+                </p>
+            </div>
+        </div>
+    </div>
 </header>
