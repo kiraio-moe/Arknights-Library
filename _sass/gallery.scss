@@ -1,0 +1,38 @@
+.gallery {
+    background-image: url("../images/backgrounds/bg.37579e21.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    & .gallery-content {
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            width: 0.2rem;
+            background-color: $ak-light-gray;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $ak-yellow;
+        }
+    }
+
+    & .card {
+        background-color: transparent;
+        overflow: hidden;
+        border: hidden;
+        border-radius: 0;
+        cursor: pointer;
+    }
+
+    & .card-img {
+        width: -webkit-fill-available;
+        border-radius: 0;
+        transition: ease-in-out all 0.5s;
+
+        &:hover {
+            transition: ease-in-out all 0.5s;
+            transform: scale(1.1);
+        }
+    }
+}

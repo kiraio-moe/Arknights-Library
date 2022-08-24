@@ -1,13 +1,32 @@
 $(() => {
     /*** Sticky section ***/
     // height = visible window
-    $viewportHeight = window.innerHeight;
-    const navbarLink = $(
-        "#offcanvasTop > div > div.offcanvas-body > nav > a.nav-link"
-    );
+    let viewportHeight = window.innerHeight;
 
     $(".vh").css({
-        height: $viewportHeight,
+        height: viewportHeight,
+    });
+
+    $(".gallery-content").css({
+        "max-height": viewportHeight - 140,
+    });
+
+    const galleryImg = $(".gallery .gallery-content .card");
+    galleryImg.mouseenter(function () {
+        galleryImg.css({
+            filter: "brightness(0.5)",
+            transition: "ease-in-out all 0.5s",
+        });
+        $(this).css({
+            filter: "brightness(1)",
+            transition: "ease-in-out all 0.5s",
+        });
+    });
+    galleryImg.mouseleave(function () {
+        $(this && galleryImg).css({
+            filter: "brightness(1)",
+            transition: "ease-in-out all 0.5s",
+        });
     });
 
     $.scrollify({
@@ -16,15 +35,13 @@ $(() => {
         interstitialSection: ".footer",
         scrollSpeed: 150,
         offset: 0,
-        scrollbars: true,
-        standardScrollElements: "",
+        scrollbars: false,
+        standardScrollElements: ".gallery-content",
         setHeights: true,
-        overflowScroll: true,
+        overflowScroll: false,
         updateHash: false,
         touchScroll: true,
-        before: function () {
-            // navbarLink.removeClass("active");
-        },
+        before: function () {},
         after: function () {
             UpdateNavbarLinkState(navbarLink);
         },
@@ -33,6 +50,10 @@ $(() => {
             UpdateNavbarLinkState(navbarLink);
         },
     });
+
+    const navbarLink = $(
+        "#offcanvasTop > div > div.offcanvas-body > nav > a.nav-link"
+    );
 
     $("#offcanvasTop > div > div.offcanvas-body > nav > a").click(function () {
         $.scrollify.move("#" + $(this).attr("data-scrollify-move"));
@@ -47,11 +68,11 @@ $(() => {
 });
 
 function UpdateNavbarLinkState(obj) {
-    current = $.scrollify.current();
+    let current = $.scrollify.current();
     obj.removeClass("active");
 
-    for (var i = 0; i < obj.length; i++) {
-        var el = obj.eq(i);
+    for (let i = 0; i < obj.length; i++) {
+        let el = obj.eq(i);
         if (
             $(el).attr("data-scrollify-move") ==
             current.attr("data-section-name")

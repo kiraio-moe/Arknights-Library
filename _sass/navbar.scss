@@ -81,7 +81,8 @@
                         cursor: pointer;
                     }
                 }
-                & .nav-link.active {
+                & .nav-link.active:not(:hover) {
+                    padding-left: 1em;
                     border-bottom: $ak-yellow 2px solid;
                 }
             }

@@ -14,12 +14,13 @@
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: fixed;
+        margin: 0.1rem;
         // transform-style: preserve-3d;
         // transform: perspective(26rem);
     }
 
     // & .ak-logo {
-        // transform: translateZ(100rem)
+    //     transform: translateZ(10rem)
     // }
 
     & video {
@@ -53,7 +54,8 @@
         z-index: 2;
 
         & .title {
-            font-family: "NicoKaku";
+            // font-family: "NicoKaku";
+            font-family: serif;
         }
     }
 }
