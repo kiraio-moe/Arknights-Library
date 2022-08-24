@@ -1,11 +1,32 @@
 {% comment %} Our SEO meta tags. {% endcomment %}
 
 <head>
+    {%- include preload.html -%}
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta property="og:title" content="{{ site.title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="{{ site.description }}" />
+    <meta
+        property="og:image"
+        content="{{ 'assets/images/favicons/favicon.ico' | relative_url }}"
+    />
+    <meta property="og:url" content="{{ site.url }}" />
+    <meta name="description" content="{{ site.description }}" />
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <meta
+        name="theme-color"
+        content="#000000"
+        media="(prefers-color-scheme: dark)"
+    />
+    <title>{{ site.title }}</title>
+    <link
+        rel="shortcut icon"
+        href="{{ 'assets/images/favicons/favicon.ico' | relative_url }}"
+        type="image/x-icon"
     />
     {%- seo -%} {%- include styles.html -%}
 </head>

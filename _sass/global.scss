@@ -29,7 +29,18 @@ a {
     }
 }
 
+html::-webkit-scrollbar {
+    display: none;
+}
+
+::selection {
+    color: $ak-black;
+    background-color: $ak-yellow;;
+}
+
 body {
+    scroll-behavior: smooth;
+    overflow: hidden;
     font-family: "Poppins", sans-serif;
     background-color: $ak-dark-gray;
     color: $ak-white;
