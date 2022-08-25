@@ -2,28 +2,33 @@ $(() => {
     /*** Sticky section ***/
     // height = visible window
     let viewportHeight = window.innerHeight;
+    let sectionContentHeight = viewportHeight / 1.3;
 
     $(".vh").css({
         height: viewportHeight,
     });
 
-    $(".gallery-content").css({
-        "max-height": viewportHeight - 140,
+    $(".sch").css({
+        "max-height": sectionContentHeight,
+        height: sectionContentHeight,
     });
 
     const galleryImg = $(".gallery .gallery-content .card");
     galleryImg.mouseenter(function () {
         galleryImg.css({
+            "-webkit-filter": "brightness(0.5)",
             filter: "brightness(0.5)",
             transition: "ease-in-out all 0.5s",
         });
         $(this).css({
+            "-webkit-filter": "brightness(1)",
             filter: "brightness(1)",
             transition: "ease-in-out all 0.5s",
         });
     });
     galleryImg.mouseleave(function () {
         $(this && galleryImg).css({
+            "-webkit-filter": "brightness(1)",
             filter: "brightness(1)",
             transition: "ease-in-out all 0.5s",
         });
@@ -36,7 +41,7 @@ $(() => {
         scrollSpeed: 150,
         offset: 0,
         scrollbars: false,
-        standardScrollElements: ".gallery-content",
+        standardScrollElements: ".normal-scroll",
         setHeights: true,
         overflowScroll: false,
         updateHash: false,
