@@ -33,6 +33,11 @@ html::-webkit-scrollbar {
     display: none;
 }
 
+::-moz-selection {
+    color: $ak-black;
+    background-color: $ak-yellow;;
+}
+
 ::selection {
     color: $ak-black;
     background-color: $ak-yellow;;

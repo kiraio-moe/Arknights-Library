@@ -22,11 +22,16 @@
         content="#000000"
         media="(prefers-color-scheme: dark)"
     />
-    <title>{{ site.title }}</title>
     <link
         rel="shortcut icon"
         href="{{ 'assets/images/favicons/favicon.ico' | relative_url }}"
         type="image/x-icon"
     />
+    <link
+        rel="icon"
+        type="image/x-icon"
+        href="{{ 'assets/images/favicons/favicon.ico' | relative_url }}"
+    />
+    <title>{{ site.title }}</title>
     {%- seo -%} {%- include styles.html -%}
 </head>
