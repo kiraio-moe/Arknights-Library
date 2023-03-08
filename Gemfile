@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 # gem "rails"
 gem "jekyll", "~> 3.9.2" # See GitHub dependecy: https://pages.github.com/versions/
-gem "webrick", "~> 1.4.0"
+gem "webrick", "~> 1.6.1"
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.0", :install_if => Gem.win_platform?
 
